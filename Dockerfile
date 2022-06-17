@@ -16,6 +16,6 @@ WORKDIR /app
 
 VOLUME /config
 
-HEALTHCHECK CMD curl --fail http://localhost:9880/ || exit 1
+HEALTHCHECK NONE
 
 ENTRYPOINT ["python3", "main.py", "-c", "/config/config.yaml"]
